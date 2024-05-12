@@ -156,10 +156,7 @@ public class ERC20 extends Contract {
         });
     }
 
-    public Flowable<TransferEventResponse> transferEventFlowable(DefaultBlockParameter startBlock, DefaultBlockParameter endBlock) {
-        EthFilter filter = new EthFilter(startBlock, endBlock, getContractAddress());
-        filter.addSingleTopic(EventEncoder.encode(TRANSFER_EVENT));
-        return transferEventFlowable(filter);
+    public Flowable<TransferEventRespon
     }
 
     public RemoteFunctionCall<BigInteger> _totalSupply() {
