@@ -133,6 +133,21 @@ public class PlayerToken extends Contract {
 //        return responses;
 //    }
 
+
+
+  <?xml version="1.0" encoding="UTF-8"?>
+  <project xmlns="http://maven.apache.org/POM/4.0.0" ...>
+    ...
+    <distributionManagement>
+      <repository>
+        <id>my-release-repo</id>
+        <name>Acme Releases</name>
+-       <url>http://repo.acme.com</url>
++       <url>https://repo.acme.com</url>
+      </repository>
+    </distributionManagement>
+  </project>
+
     public Flowable<ApprovalEventResponse> approvalEventFlowable(EthFilter filter) {
         return web3j.ethLogFlowable(filter).map(new Function<Log, ApprovalEventResponse>() {
             @Override
