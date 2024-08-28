@@ -11,7 +11,9 @@ public class StandardCharsets {
 
         // Error code
         if (isAdmin)
-        doFirstThing();
+        {
+            doFirstThing();
+        }
         doSecondThing();
         
         String s = getPropertyValue();
